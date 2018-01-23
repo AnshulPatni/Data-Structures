@@ -1,4 +1,9 @@
-//SAMPLE
+/*
+ *stlvectorList.cpp
+ *
+ *  Created on: Oct 24, 2017
+ *      Author: anshulpatni
+ */
 
 #include <iostream>
 #include <iomanip>
@@ -61,7 +66,7 @@ string commafy(const long n);
 
 
 // Vector and list sizes.
-const int SIZES[] = {100, 500, 1000, 5000, 10000};
+const int SIZES[] = {100, 500, 1000, 5000, 10000, 50000};
 // Add size 50000 outside of CodeCheck.
 
 /**
@@ -88,7 +93,7 @@ int main()
 
     // Compute and print the overall elapsed time.
     steady_clock::time_point end_time = steady_clock::now();
-    duration<double> elapsed_time = duration_cast<duration<double>>(end_time - start_time);
+    duration<double> elapsed_time = duration_cast<duration<double> >(end_time - start_time);
     cout << "Done! Total time: " << elapsed_time.count() << " seconds" << endl;
 
     return 0;
@@ -96,11 +101,11 @@ int main()
 
 void run_test_suite() throw (string)
 {
-    run_test_functions("Prepend", vector_prepends, list_prepends);
-    run_test_functions("Append",  vector_appends,  list_appends);
-    run_test_functions("Get",     vector_gets,     list_gets);
-    run_test_functions("Remove",  vector_removes,  list_removes);
-    run_test_functions("Insert",  vector_inserts,  list_inserts);
+    run_test_functions("Prepend",vector_prepends,list_prepends);
+    run_test_functions("Append", vector_appends, list_appends);
+    run_test_functions("Get",  vector_gets, list_gets);
+    run_test_functions("Remove",  vector_removes,list_removes);
+    run_test_functions("Insert",vector_inserts, list_inserts);
 }
 
 void run_test_functions(const string test_name,
@@ -125,6 +130,7 @@ void run_test_functions(const string test_name,
 
         // Run and time the vector test and print its statistics.
         SortedVector sv;
+		sv.reserve(size);
         long etv = timed_test(sv, size, fv);
         cout << setw(9) << commafy(etv) << " ms";
         cout << setw(9) << commafy(Node::get_constructor_count());

@@ -1,3 +1,10 @@
+/*
+ * TestSuite.cpp
+ *
+ *  Created on: Oct 24, 2017
+ *      Author: anshulpatni
+ */
+
 #include <string>
 #include "SortedVector.h"
 #include "SortedList.h"
@@ -43,16 +50,16 @@ void vector_gets(SortedVector& sv, const int size) throw (string)
     // First fill the vector data.
     vector_appends(sv, size);
     Node::reset();
-   
+
     // Loop to access nodes at random positions.
     for (int i = 0; i < GETS_COUNT; i++)
     {
-        
+
         int index = rand() % size;
         long value = sv.at(index).get_value();
 
         /***** Complete this function. *****/
-    
+
         // Make sure we got the correct node.
         if (index != value) throw string("Vector data mismatch!");
     }
@@ -99,7 +106,6 @@ void list_removes(SortedList& sl, const int size)
     // First fill the list data.
     list_appends(sl, size);
     Node::reset();
-
     while (sl.size() > 0)
     {
         int index = rand() % sl.size();

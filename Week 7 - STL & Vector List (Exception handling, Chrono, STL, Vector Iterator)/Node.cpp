@@ -1,3 +1,10 @@
+/*
+ * Node.cpp
+ *
+ *  Created on: Oct 24, 2017
+ *      Author: anshulpatni
+ */
+
 #include <iostream>
 #include "Node.h"
 
@@ -31,7 +38,7 @@ long Node::destructor_count;
   */
  Node::~Node()
  {
-    destructor_count++;  
+    destructor_count++;
  }
 
  /**
@@ -86,14 +93,7 @@ long Node::destructor_count;
   */
  bool Node::operator ==(const Node& other) const
  {
-    /*if(value == other.value)
-    {
-       return true;
-    }
-    else
-    {
-       return false;
-    }*/
+
     return value == other.value;
  }
 
@@ -104,10 +104,6 @@ long Node::destructor_count;
   */
  bool Node::operator  >(const Node& other) const
  {
-    /*if(value > other.value)
-    {
-       return true;
-    }
-    return false;*/
+
     return value > other.value;
  }

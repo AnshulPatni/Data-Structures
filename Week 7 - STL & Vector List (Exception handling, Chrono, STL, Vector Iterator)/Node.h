@@ -1,3 +1,11 @@
+/*
+ * Node.h
+ *
+ *  Created on: Oct 24, 2017
+ *      Author: anshulpatni
+ */
+
+
 #ifndef NODE_H_
 #define NODE_H_
 
@@ -70,6 +78,7 @@ public:
 
 private:
     long value;
+
 
     // Static member variables, which are global to the class.
     // These variables exist independently from any Node objects.

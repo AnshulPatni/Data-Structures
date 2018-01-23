@@ -1,3 +1,9 @@
+/*
+ * SortedList.cpp
+ *
+ *  Created on: Oct 24, 2017
+ *      Author: anshulpatni
+ */
 #include <iostream>
 #include <iterator>
 #include <list>
@@ -41,15 +47,12 @@ void SortedList::prepend(const long value)
 {
    /***** Complete this function. *****/
    list<Node>::iterator it = data.begin();
-   //Node new_node(value);
-   
    data.insert(it, Node(value));
 }
 
 void SortedList::append(const long value)
 {
    /***** Complete this function. *****/
-   //list<Node>::iterator it = data.begin();
    data.push_back(Node(value));
 }
 
@@ -64,15 +67,11 @@ void SortedList::remove(const int index)
 void SortedList::insert(const long value)
 {
     /***** Complete this function. *****/
-   list<Node>::const_iterator it = data.begin();
-
-   while((it != data.end()) && (it->get_value() < value))
-   {
+    list<Node>::const_iterator it = data.begin();
+    while((it != data.end()) && (it->get_value() < value))
        it++;
-   }
-   
-   data.insert(it, Node(value));
-    
+
+    data.insert(it, Node(value));
 }
 
 Node SortedList::at(const int index)

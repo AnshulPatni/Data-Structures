@@ -1,3 +1,11 @@
+/*
+ * SortedVector.h
+ *
+ *  Created on: Oct 24, 2017
+ *      Author: anshulpatni
+ */
+
+
 #ifndef SORTEDVECTOR_H_
 #define SORTEDVECTOR_H_
 
@@ -8,8 +16,6 @@
 /***** Modify this file if necessary. *****/
 
 using namespace std;
-
-
 
 /**
  * A sorted vector of Node objects.
@@ -22,8 +28,6 @@ public:
      * Reset the global Node counters.
      */
     SortedVector();
-    
-    vector<Node> get_data();
 
     /**
      * Destructor.
@@ -72,6 +76,8 @@ public:
      * @return a copy of the data node.
      */
     Node at(const int index) const;
+	
+	void reserve(const int size);
 
 private:
     vector<Node> data;

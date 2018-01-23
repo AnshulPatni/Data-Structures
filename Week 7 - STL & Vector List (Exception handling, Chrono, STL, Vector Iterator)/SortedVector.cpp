@@ -1,3 +1,11 @@
+/*
+ * SortedVector.cpp
+ *
+ *  Created on: Oct 24, 2017
+ *      Author: anshulpatni
+ */
+
+
 #include <iostream>
 #include <iterator>
 #include "SortedVector.h"
@@ -8,11 +16,6 @@ SortedVector::SortedVector()
 {
     Node::reset();
 }
-
-/*vector<Node> SortedVector::get_data()
-{
-   return data;
-}*/
 
 SortedVector::~SortedVector()
 {
@@ -56,26 +59,29 @@ void SortedVector::append(const long value)
 void SortedVector::remove(const int index)
 {
     /***** Complete this function. *****/
-    data.erase(data.begin() + index);
+	vector<Node>::iterator it = data.begin();
+	advance(it, index);
+	data.erase(it);
 }
 
 void SortedVector::insert(const long value)
 {
     /***** Complete this function. *****/
-   vector<Node>::const_iterator it = data.begin();
-
-   while((it != data.end()) && (it->get_value() < value))
+    vector<Node>::const_iterator it = data.begin();
+    while((it != data.end()) && (it->get_value() < value))
       it++;
-   
-   data.insert(it, Node(value));
+
+    data.insert(it, Node(value));
 }
 
 Node SortedVector::at(const int index) const
 {
     /***** Complete this function. *****/
-    /*vector<Node>::const_iterator it = data.begin();
+    vector<Node>::const_iterator it = data.begin();
     advance(it, index);
-    return *it;*/
-    
-    return data[index];
+    return *it;
 }
+
+void SortedVector::reserve(const int size)
+{
+	data.reserve(size);
