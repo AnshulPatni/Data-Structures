@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_151 (Oracle Corporation)
+
+Name: BinarySearchTree.cpp
+SHA-256-Digest: c/CWM7dVQRTNp7T6NqmHKxxtrF/y+H2UABkckXOXMPc=
+
+Name: codecheck.log
+SHA-256-Digest: l0/PBiYKlqqpE8Z40LKTrl7VRSRrn2BstbEuOdFFR+Q=
+
+Name: report.html
+SHA-256-Digest: cvhEwOWzPyfZ6No7k06Iq8azPAOa6hkvh4b1EgQDxPQ=
+
+Name: AvlTree.cpp
+SHA-256-Digest: KebNhMrBayBplghTgf3yXJteSVOKQAVEyHv50xvrzGg=
+
+Name: codecheck.out
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+

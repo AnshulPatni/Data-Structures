@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_151 (Oracle Corporation)
+
+Name: WordMap.cpp
+SHA-256-Digest: SKnINhv7NhXmw5Y7R7IzUhFvLNcyrHBu74trHsApzrA=
+
+Name: codecheck.log
+SHA-256-Digest: IdrcKvBnAPQnLf+hQGJP0z7V2mR2kmJMWVgVMQBVk1s=
+
+Name: Word.h
+SHA-256-Digest: TbP0o4x+yJKhFODvJsGv5Ty1RQleHP1jt7Ud+r0ijnk=
+
+Name: report.html
+SHA-256-Digest: oqMWEzHPslWQCpv4Y6HkOB9J0ta/vbvrk/Sq96TcQH0=
+
+Name: Word.cpp
+SHA-256-Digest: 5lTwkVTBUh6Io9SCvcvl4+mOIAFuEtNcz8ICvHVWxrg=
+
+Name: WordMap.h
+SHA-256-Digest: enxy/MbDev3bJh9ZsWjREHnob3IzNG0wBIEsulLUjLI=
+
+Name: WordVector.cpp
+SHA-256-Digest: NZTTQ9xlJ2M6tdPTsgR/O01jM0RGxZcNfRUY86zQycY=
+
+Name: Constitution.cpp
+SHA-256-Digest: TP2OGCpedoLfYAwVV0K4a0BWWOjEWNH+ii/uigGgm24=
+
+Name: codecheck.out
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: TimedContainer.cpp
+SHA-256-Digest: LCOxhBJsuDgRyHKUIwyuRNpF/nLxAJMV1VxwPnHFGlY=
+
+Name: TimedContainer.h
+SHA-256-Digest: AslNLN6K1f8w/KflaikfiHa92JBtOoV57KAJjcG+6O4=
+
+Name: WordVector.h
+SHA-256-Digest: An4aj2bKDNsALVMpRbUCJtfiOUWXz5119P6P3Gfv73s=
+

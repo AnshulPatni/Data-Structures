@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Version" content="0.3"/>
+<meta name="Submission" content="/tmp/codecheck/17091418183321331044920541594"/>
+<meta name="Problem" content="17011623552sefot95xmzaj71sxktly25i9"/>
+<meta name="Level" content="1"/>
+<meta name="Time" content="2017-09-14T18:18:25Z"/>
+<meta name="ID" content="primes"/>
+<meta name="User" content="17083107201z2j9wawj3b6rnre19a7jbot3"/>
+<meta name="Elapsed" content="727 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header run">Testing primes.cpp</p>
+<pre class="output">  2   3   5   7  11  13  17  19  23  29  31  37  41  43  47  53  59  61  67  71 
+ 73  79  83  89  97 101 103 107 109 113 127 131 137 139 149 151 157 163 167 173 
+179 181 191 193 197 199 211 223 227 229 233 239 241 251 257 263 269 271 277 281 
+283 293 307 311 313 317 331 337 347 349 353 359 367 373 379 383 389 397 401 409 
+419 421 431 433 439 443 449 457 461 463 467 479 487 491 499 503 509 521 523 541 
+547 557 563 569 571 577 587 593 599 601 607 613 617 619 631 641 643 647 653 659 
+661 673 677 683 691 701 709 719 727 733 739 743 751 757 761 769 773 787 797 809 
+811 821 823 827 829 839 853 857 859 863 877 881 883 887 907 911 919 929 937 941 
+947 953 967 971 977 983 991 997 
+
+Done!</pre>
+<span class="pass">pass </span><p class="header studentFiles">Student files</p>
+<p class="caption">primes.cpp:</p>
+<pre>/**
+ * Declaring Includes
+ */
+ 
+#include &lt;iostream&gt;
+using namespace std;
+
+/**
+ * Declaring Constants
+ */
+
+const int MAX_NUMBER = 1000;  // maximum possible prime number
+const int ROW_SIZE   = 20;    // row size for printing
+
+/**
+ * Declaring Functions
+ */
+
+void compute_primes(bool prime_array[]);
+void print_primes(bool prime_array[]);
+
+/***** Complete this program. *****/
+
+/**
+ * The main: Compute and print the prime numbers up to MAX_NUMBER.
+ */
+int main()
+{
+   bool prime_array[MAX_NUMBER];
+   int n, i, k, l;
+   
+   compute_primes(prime_array);  // Calling the function to compute prime numbers
+   
+   print_primes(prime_array);    // Calling the function to print the prime numbers
+   
+   cout &lt;&lt; endl &lt;&lt; endl;
+   cout &lt;&lt; "Done!";
+}
+
+/**
+ * Defining Functions
+ */
+
+// Funtion to compute all the prime number till the MAX_NUMBER
+
+void compute_primes(bool prime_array[MAX_NUMBER])
+{
+   int i, k;
+   for(i = 2; i &lt; MAX_NUMBER; i++)
+   {
+      prime_array[i] = true;   // Initializing all the values in the boolean array to true
+   }
+   
+   k = 2;
+   
+   while (k*k &lt; MAX_NUMBER)   // Looping till the value is less than the square root of MAX_NUMBER
+   {
+      if (prime_array[k] == 1)
+      { 
+        for(int j = k*k; j &lt;= MAX_NUMBER; j = j+k)
+        {
+            prime_array[j] = false;    // Setting all the multiples od a prime number to false
+        }
+      }
+      k = k + 1;
+   }
+}
+
+// Funtion to print all the prime number till the MAX_NUMBER
+
+void print_primes(bool prime_array[MAX_NUMBER])
+{
+    int counter = 1;
+    for(int l = 2; l &lt; MAX_NUMBER; l++)
+    {
+        if(prime_array[l] == true)     // Printing only the true values which indicate that the number is prime
+        {
+            // Printing in a proper format
+            if (l &lt; 10)
+            {
+               cout &lt;&lt; "  " &lt;&lt; l &lt;&lt; " ";
+            }
+            else if (l &gt; 10 &amp;&amp; l &lt; 100)
+            {
+               cout &lt;&lt; " " &lt;&lt; l &lt;&lt; " ";
+            }
+            else if (l &gt; 100)
+            {
+               cout &lt;&lt; l &lt;&lt; " ";
+            }
+            counter = counter + 1;
+        }
+        if(counter &gt; ROW_SIZE)   // Changing the row after the max row size is achieved
+        {
+            cout &lt;&lt; endl;
+            counter = 1;
+        }
+   }
+}
+</pre>
+<p class="header score">Score</p>
+<p class="score">1/1</p>
+<p class="download"><a href="primes.signed.zip">Download</a></p>
+<div class="footnotes"><div class="footnote">2017-09-14T18:18:25Z</div>
+</div>
+</body></html>
